@@ -12,7 +12,7 @@ from sklearn.feature_extraction import DictVectorizer
 
 
 def load_model():
-    with open('random_forest .bin', 'rb') as f_in:
+    with open('random_forest.bin', 'rb') as f_in:
         dv, model = pickle.load(f_in)
     return dv, model
 dv, model = load_model()
@@ -91,8 +91,20 @@ def show_model_page():
         st.markdown("<h1 style='text-align: center; color: green;'>prediction</h1>", unsafe_allow_html=True)
     
     from PIL import Image
-    image = Image.open('mathew-schwartz-P-WWHRF7qe0-unsplash.jpg')
+    image = Image.open('luke-chesser-unsplash.jpg')
+    col1, col2, col3 = st.columns([10,10,10])
 
-    st.image(image, caption='')
+    with col1:
+        st.markdown("<h1 style='text-align: center; color: blue;'>How Do I achieve my KPYs?</h1>", unsafe_allow_html=True)
+        #st.subheader("How Do I my goals?")
+
+    with col2:
+        st.image(image, width=500)
+
+    with col3:
+        st.markdown("<h1 style='text-align: center; color: green;'>Machine learning or Artificial Intelligence may be your best Toolkit</h1>", unsafe_allow_html=True)
+        #st.subheader("Machine learning or Artificial Intelligence may be your best Toolkit")
+    #st.image(image, width=400, caption='Road To Unknown')
+    
 
 
