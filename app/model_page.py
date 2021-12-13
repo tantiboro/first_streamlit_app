@@ -92,17 +92,17 @@ def show_model_page():
     
     from PIL import Image
     image = Image.open('luke-chesser-unsplash.jpg')
-    col1, col2, col3 = st.columns([10,10,10])
+    col1, col2, col3 = st.columns([6,8,6])
 
     with col1:
-        st.markdown("<h1 style='text-align: center; color: blue;'>How Do I achieve my KPYs?</h1>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; color: blue;'>How Do I achieve my KPYs?</h2>", unsafe_allow_html=True)
         #st.subheader("How Do I my goals?")
 
     with col2:
         st.image(image, width=500)
 
     with col3:
-        st.markdown("<h1 style='text-align: center; color: green;'>Machine learning or Artificial Intelligence may be your best Toolkit</h1>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; color: green;'>Machine learning or Artificial Intelligence may be your best Toolkit</h2>", unsafe_allow_html=True)
         #st.subheader("Machine learning or Artificial Intelligence may be your best Toolkit")
     #st.image(image, width=400, caption='Road To Unknown')
     
