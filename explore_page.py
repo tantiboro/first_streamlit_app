@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # Use the full page instead of a narrow central column
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align: center; color: red;'>Analysis of Kiva Application Process</h1>", unsafe_allow_html=True)
 @st.cache
 def load_data():
@@ -49,15 +49,16 @@ def show_explore_page():
     image3 = Image.open('newplot.png')
     #st.image(image,caption='Bar Plot of the imbalanced dataset')
     #image2 = Image.open('barplot_balanced.png')
-    col1, col2 = st.columns(2)
-
+    col1, col2, col3 = st.columns([12,10, 12])
+    with col2:
+        st.write("   ")
     #imbalanced_barplot = Image.open(image)
-    col1.header("Application ber sector of Activity")
-    col1.image(image3, use_column_width=False)
+    col1.header("Sector of Activity")
+    col1.image(image3, width=400)
 
     grayscale = Image.open('funded_loan_ratio.png')
-    col2.header("funded_loan_ratio")
-    col2.image(grayscale, use_column_width=False)
+    col3.header("Funded versus  Expired Loans")
+    col3.image(grayscale, width=400)
 
     with dataset:
         st.dataframe(df)
@@ -70,15 +71,16 @@ def show_explore_page():
     original = Image.open('newplot_1.png')
     #st.image(image,caption='Bar Plot of the imbalanced dataset')
     #image2 = Image.open('barplot_balanced.png')
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns([10, 10, 10])
 
     #imbalanced_barplot = Image.open(image)
     col1.header("Imbalanced Barplot")
-    col1.image(original, use_column_width=True)
-
+    col1.image(original, width=400)
+    with col2:
+        st.write("")
     grayscale = Image.open('newplot_2.png')
-    col2.header("Balanced Barplot")
-    col2.image(grayscale, use_column_width=True)
+    col3.header("Balanced Barplot")
+    col3.image(grayscale, width=400)
     page_bg_img = '''
 <style>
 body {

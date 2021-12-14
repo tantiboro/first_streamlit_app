@@ -34,7 +34,7 @@ def predict_single(customer, dv, model):
 
 
 def show_model_page():
-    st.markdown("<h1 style='text-align: center; color: red;'>KIVA LOAN APPLICATION</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: red;'>KIVA LOAN APPLICATION OUTCOME PREDICTION</h1>", unsafe_allow_html=True)
 
     # html_temp = """
     # <div style="background-color:tomato;padding:10px">
@@ -42,13 +42,13 @@ def show_model_page():
     # """
 
     # st.markdown(html_temp, unsafe_allow_html=True) 
-    st.markdown("<h1 style='text-align: center; color: green;'>Funding application Process</h1>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color: green;'>This application is not associated with the Kiva organization and does not guarantee any funding. Our goal is to help you process your application</h4>", unsafe_allow_html=True)
     #st.title("Funding application Process") 
 
     #st.markdown(html_temp, unsafe_allow_html=True)
 
     #st.subheader(""" We need some information to predict outcome of your loan""")
-    st.markdown("<h2 style='text-align: center; color: blue;'>Please give me some information about your application and I will predict the outcome</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: blue;'>Thank you for using our application. Please select your sector name, your currency policy from the dropdown menu on the left. Do not forget to add the loan amount needed in US dollars and click on the submit button </h3>", unsafe_allow_html=True)
     sector_name = (
         "Agriculture",
         "Arts",
@@ -92,17 +92,18 @@ def show_model_page():
     
     from PIL import Image
     image = Image.open('luke-chesser-unsplash.jpg')
-    col1, col2, col3 = st.columns([6,8,6])
+    col1, col2, col3, col4 = st.columns([6,12,6,12])
 
     with col1:
-        st.markdown("<h2 style='text-align: center; color: blue;'>How Do I achieve my KPYs?</h2>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: blue;'>How Do I achieve my KPYs?</h3>", unsafe_allow_html=True)
         #st.subheader("How Do I my goals?")
 
     with col2:
-        st.image(image, width=500)
-
+        st.image(image, width=350)
     with col3:
-        st.markdown("<h2 style='text-align: center; color: green;'>Machine learning or Artificial Intelligence may be your best Toolkit</h2>", unsafe_allow_html=True)
+        st.write("")
+    with col4:
+        st.markdown("<h3 style='text-align: center; color: green;'>Machine learning or Artificial Intelligence may be your best Toolkit</h3>", unsafe_allow_html=True)
         #st.subheader("Machine learning or Artificial Intelligence may be your best Toolkit")
     #st.image(image, width=400, caption='Road To Unknown')
     
