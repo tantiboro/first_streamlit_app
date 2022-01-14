@@ -95,7 +95,7 @@ def show_model_page():
     col1, col2, col3, col4 = st.columns([6,12,6,12])
 
     with col1:
-        st.markdown("<h3 style='text-align: center; color: blue;'>How Do I achieve my KPYs?</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: blue;'>How Do I achieve my KPIs?</h3>", unsafe_allow_html=True)
         #st.subheader("How Do I my goals?")
 
     with col2:
